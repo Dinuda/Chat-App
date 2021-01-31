@@ -1,5 +1,9 @@
 # RealTime Chat-App using NODEJS
 
+## Install NODE_MODULES
+
+    npm install
+
 ## Run application
 
 1.  Using node
