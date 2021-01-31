@@ -16,4 +16,4 @@
 
 ## Working example
 
-[![Working example](https://drive.google.com/file/d/1NM_xIJYG_oJq5CBTMf_exnABCaD_PDH6/view)](https://drive.google.com/file/d/1iC7Pjsmn1wfMkhU0VUYgVB_y_tjRv6H7/view?usp=sharing)
+https://drive.google.com/file/d/1iC7Pjsmn1wfMkhU0VUYgVB_y_tjRv6H7/preview
