@@ -84,6 +84,17 @@ $messageForm.addEventListener('submit', (e) => {
             return console.log(error)
         }
 
+        let d = new Date();
+
+        // display message in UI
+        const html = Mustache.render(messageTemplate, {
+            username: username,
+            message: message,
+            createdAt: moment(d.getTime()).format('h:mm a')
+        })
+        $messages.insertAdjacentHTML('beforeend', html)
+        autoscroll()
+
         console.log('Message delivered!')
     })
 })
