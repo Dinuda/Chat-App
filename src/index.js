@@ -51,6 +51,7 @@ io.on('connection', (socket) => {
             socket.emit('message', generateMessage('Server', 'Profanity is not allowed!'))
             return callback('Profanity is not allowed!')
         }
+        socket.broadcast.to(user.room).emit("message",generateMessage(user.username, message))
         callback()
     })
 
