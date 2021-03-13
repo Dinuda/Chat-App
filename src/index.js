@@ -51,6 +51,7 @@ io.on('connection', (socket) => {
             socket.emit('message', generateMessage('Server', 'Profanity is not allowed!'))
             return callback('Profanity is not allowed!')
         }
+        socket.broadcast.to(user.room).emit("message",generateMessage(user.username, message))
         callback()
     })
 
@@ -63,7 +64,7 @@ io.on('connection', (socket) => {
 
     // Disconnect from server and sockets.
     socket.on('disconnect', () => {
-        const user = removeUser(socket.id)
+        const user = removeUser(socket.id, socket.room)
 
         if (user) {
             io.to(user.room).emit('message', generateMessage('Admin', `${user.username} has left!`))

@@ -61,11 +61,10 @@ socket.on('locationMessage', (message) => {
 })
 
 socket.on('roomData', ({ room, users }) => {
-    const html = Mustache.render(sidebarTemplate, {
+    document.querySelector('#sidebar').innerHTML = Mustache.render(sidebarTemplate, {
         room,
         users
     })
-    document.querySelector('#sidebar').innerHTML = html
 })
 
 $messageForm.addEventListener('submit', (e) => {
