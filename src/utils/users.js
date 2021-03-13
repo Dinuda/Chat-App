@@ -30,8 +30,8 @@ const addUser = ({ id, username, room }) => {
     return { user }
 }
 
-const removeUser = (id) => {
-    const index = users.findIndex((user) => user.id === id)
+const removeUser = (id, room) => {
+    const index = users.findIndex((user) => user.id === id && user.room === room)
 
     if (index !== -1) {
         return users.splice(index, 1)[0]
